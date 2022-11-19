@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(65.19% 65.19% at 50% 44.19%, #FAA307 0%, rgb(232 93 4 / 84%) 100%);
+}
+
+.tictactoe {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.squares {
+    background-color: black;
+    width: 22vmin;
+    height: 22vmin;
+    border-radius: 8px;
+    font-size: 12vmin;
+    /* color: #d161ff; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
