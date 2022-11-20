@@ -85,7 +85,7 @@ const pickSquare = (square) => {
     //Conta o numero de rounds se for igual a 9 siginifica que empatou.
     rounds += 1;
     if (rounds == 9) {
-      showDraw();
+      setTimeout(showDraw,500)
     } else if (rounds >= 5) {
       checkForWin();
     }
