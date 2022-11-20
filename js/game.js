@@ -30,12 +30,22 @@ const showWinner = (letter) => {
   container.classList.remove('container')
   container.classList.add('end-game-container')
   const img = document.createElement('img');
-  img.setAttribute('src','assets/trophy.svg')
+  img.setAttribute('src','assets/trophy.svg');
   const h1 = document.createElement('h1');
   h1.innerText = `Jogador ${letter} venceu !!!`;
   container.appendChild(img);
   container.appendChild(h1);
-  console.log(container);
+}
+
+// Monta a pagina de empate
+const showDraw = () => {
+  const container = document.querySelector('.container');
+  container.innerHTML = ""
+  container.classList.remove('container')
+  container.classList.add('end-game-container')
+  const img = document.createElement('img');
+  img.setAttribute('src','assets/tie.svg');
+  container.appendChild(img);
 }
 
 //Checa se algum jogador ganhou ou se empatou
@@ -60,24 +70,24 @@ const checkForWin = () => {
 
 const pickSquare = (square) => {
     if (xRound) {
-        xRound = false;
-        square.innerText = "X";
-        square.classList.remove('unpressed');
-        square.classList.add('pressed');
-        square.removeAttribute("onclick");
+      xRound = false;
+      square.innerText = "X";
+      square.classList.remove('unpressed');
+      square.classList.add('pressed');
+      square.removeAttribute("onclick");
     } else {
-        xRound = true;
-        square.innerText = "O";
-        square.classList.remove('unpressed');
-        square.classList.add('pressed');
-        square.removeAttribute("onclick");
+      xRound = true;
+      square.innerText = "O";
+      square.classList.remove('unpressed');
+      square.classList.add('pressed');
+      square.removeAttribute("onclick");
     }
     //Conta o numero de rounds se for igual a 9 siginifica que empatou.
     rounds += 1;
     if (rounds == 9) {
-        drawFunction();
+      showDraw();
     } else if (rounds >= 5) {
-        checkForWin();
+      checkForWin();
     }
   };
 
