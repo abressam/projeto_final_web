@@ -1,18 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(65.19% 65.19% at 50% 44.19%, #FAA307 0%, rgb(232 93 4 / 84%) 100%);
+}
+
+.reboot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 12vh;
+}
+
+h1 {
+    font-family: 'Aref Ruqaa', serif;
+    padding-top: 5vmin;
+}
+
+.reboot button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 7px #999;
+}
+
+.reboot button:active 
+{
+    box-shadow: 0px 3px #666;
+    transform: translate(0px, 6px);
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: radial-gradient(65.19% 65.19% at 50% 44.19%, #FAA307 0%, rgb(232 93 4 / 84%) 100%);
+    height: 100%;
+}
+
+.end-game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .tictactoe {
