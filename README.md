@@ -1,5 +1,5 @@
 <h1 align="center">
-Jogo da Velha <br>Projeto Final de Web
+❌ Jogo da Velha ⭕<br>Projeto Final de Web<br>
 </h1>
 
 # 🚀 Introdução
